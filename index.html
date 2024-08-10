@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Intro Section -->
+        <div id="intro">
+            <h1>Med style</h1>
+            <button id="startQuiz">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz" class="hidden">
+            <div class="timer" id="timer">Time: 00:00:00</div>
+
+            <!-- Question 1 -->
+            <div class="question" id="question1">
+                <h2>1. What is the primary role of a medical laboratory scientist?</h2>
+                <label><input type="radio" name="q1" value="Conducting surgeries"> Conducting surgeries</label>
+                <label><input type="radio" name="q1" value="Diagnosing diseases"> Diagnosing diseases</label>
+                <label><input type="radio" name="q1" value="Analyzing laboratory test results"> Analyzing laboratory test results</label>
+                <label><input type="radio" name="q1" value="Administering medications"> Administering medications</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question hidden" id="question2">
+                <h2>2. Which test is used to assess blood glucose levels over the past few months?</h2>
+                <label><input type="radio" name="q2" value="CBC"> CBC</label>
+                <label><input type="radio" name="q2" value="A1C"> A1C</label>
+                <label><input type="radio" name="q2" value="ESR"> ESR</label>
+                <label><input type="radio" name="q2" value="PT/INR"> PT/INR</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 3 -->
+            <div class="question hidden" id="question3">
+                <h2>3. What is the main function of a centrifuge in the laboratory?</h2>
+                <label><input type="radio" name="q3" value="Heating samples"> Heating samples</label>
+                <label><input type="radio" name="q3" value="Separating components"> Separating components</label>
+                <label><input type="radio" name="q3" value="Sterlizing equipment"> Sterlizing equipment</label>
+                <label><input type="radio" name="q3" value="Mixing samples"> Mixing samples</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question hidden" id="question4">
+                <h2>4. Which of the following is used to stain bacterial cells for microscopic examination?</h2>
+                <label><input type="radio" name="q4" value="Hematoxylin"> Hematoxylin</label>
+                <label><input type="radio" name="q4" value="Gram stain"> Gram stain</label>
+                <label><input type="radio" name="q4" value="Wright's stain"> Wright's stain</label>
+                <label><input type="radio" name="q4" value="Iodine"> Iodine</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 5 -->
+            <div class="question" id="question5">
+                <h2>5. What type of specimen is typically used for a throat culture?</h2>
+                <label><input type="radio" name="q5" value="Urine"> Urine</label>
+                <label><input type="radio" name="q5" value="Swab"> Swab</label>
+                <label><input type="radio" name="q5" value="Saliva"> Saliva</label>
+                <label><input type="radio" name="q5" value="Blood"> Blood</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question hidden" id="question6">
+                <h2>6. What does ELISA stand for?</h2>
+                <label><input type="radio" name="q6" value="Enzyme-Linked Immunosorbent Assay"> Enzyme-Linked Immunosorbent Assay</label>
+                <label><input type="radio" name="q6" value="Electrolyte-Linked Immunoassay"> Electrolyte-Linked Immunoassay</label>
+                <label><input type="radio" name="q6" value="Enzyme-Linked Immune Analysis"> Enzyme-Linked Immune Analysis</label>
+                <label><input type="radio" name="q6" value="Electrolyte-Labeled Immune Assay"> Electrolyte-Labeled Immune Assay</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 7 -->
+            <div class="question hidden" id="question7">
+                <h2>7. Which blood test measures the levels of hemoglobin in the blood?</h2>
+                <label><input type="radio" name="q7" value="CBC"> CBC</label>
+                <label><input type="radio" name="q7" value="BMP"> BMP</label>
+                <label><input type="radio" name="q7" value="CMP"> CMP</label>
+                <label><input type="radio" name="q7" value="A1C"> A1C</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question hidden" id="question8">
+                <h2>8. What is the primary safety concern when handling blood samples?</h2>
+                <label><input type="radio" name="q8" value="Temperature"> Temperature</label>
+                <label><input type="radio" name="q8" value="Contamination"> Contamination</label>
+                <label><input type="radio" name="q8" value="Volume"> Volume</label>
+                <label><input type="radio" name="q8" value="Colour"> Colour</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 9 -->
+            <div class="question" id="question9">
+                <h2>9. Which instrument is used to measure the concentration of substances in a solution?</h2>
+                <label><input type="radio" name="q9" value="Centrifuge"> Centrifuge</label>
+                <label><input type="radio" name="q9" value="Spectrophotometer"> Spectrophotometer</label>
+                <label><input type="radio" name="q9" value="Incubator"> Incubator</label>
+                <label><input type="radio" name="q9" value="Microscope"> Microscope</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question hidden" id="question10">
+                <h2>10. What is the purpose of a quality control procedure in a lab?</h2>
+                <label><input type="radio" name="q10" value="Increase workload"> Increase workload</label>
+                <label><input type="radio" name="q10" value="Reduce accuracy"> Reduce accuracy</label>
+                <label><input type="radio" name="q10" value="Ensure accuracy"> Ensure accuracy</label>
+                <label><input type="radio" name="q10" value="Change procedures"> Change procedures</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 11 -->
+            <div class="question hidden" id="question11">
+                <h2>11. Which of the following is a common anticoagulant used in blood collection?</h2>
+                <label><input type="radio" name="q11" value="Sodum chloride"> Sodum chloride</label>
+                <label><input type="radio" name="q11" value="Sodium citrate"> Sodium citrate</label>
+                <label><input type="radio" name="q11" value="Potassium bromide"> Potassium bromide</label>
+                <label><input type="radio" name="q11" value="Calcium chloride"> Calcium chloride</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question hidden" id="question12">
+                <h2>12. What is the standard unit for measuring blood pressure?</h2>
+                <label><input type="radio" name="q12" value="Millilitres"> Millilitres</label>
+                <label><input type="radio" name="q12" value="Grams"> Grams</label>
+                <label><input type="radio" name="q12" value="Millilitres of mercury"> Millilitres of mercury</label>
+                <label><input type="radio" name="q12" value="Degrees Celsius"> Degrees Celsius</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 13 -->
+            <div class="question" id="question13">
+                <h2>13. Which type of specimen is analyzed in a urinalysis?</h2>
+                <label><input type="radio" name="q13" value="Blood"> Blood</label>
+                <label><input type="radio" name="q13" value="Sputum"> Sputum</label>
+                <label><input type="radio" name="q13" value="Urine"> Urine</label>
+                <label><input type="radio" name="q13" value="Tissue"> Tissue</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question hidden" id="question14">
+                <h2>14. What does the term “aseptic technique” refer to?</h2>
+                <label><input type="radio" name="q14" value="Using sterile equipment"> Using sterile equipment</label>
+                <label><input type="radio" name="q14" value="Cleaning surfaces"> Cleaning surfaces</label>
+                <label><input type="radio" name="q14" value="Disinfecting hands"> Disinfecting hands</label>
+                <label><input type="radio" name="q14" value="All of the above"> All of the above</label>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+        
+            <!-- Question 15 -->
+            <div class="question hidden" id="question15">
+                <h2>15. What is the primary component of blood plasma?</h2>
+                <input type="text" id="answer15">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question hidden" id="question16">
+                <h2>16. Which method is commonly used for blood coagulation testing?</h2>
+                <input type="text" id="answer16">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 17 -->
+            <div class="question hidden" id="question17">
+                <h2>17. What is the term for the study of blood?</h2>
+                <input type="text" id="answer17">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question hidden" id="question18">
+                <h2>18. Which cell type is responsible for immune responses?</h2>
+                <input type="text" id="answer18">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 19 -->
+            <div class="question hidden" id="question19">
+                <h2>19. What is the term for a low white blood cell count?</h2>
+                <input type="text" id="answer19">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="question hidden" id="question20">
+                <h2>20. What does “CBC” stand for?</h2>
+                <input type="text" id="answer20">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 21 -->
+            <div class="question hidden" id="question21">
+                <h2>21. What is the standard term for a high red blood cell count?</h2>
+                <input type="text" id="answer21">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 22 -->
+            <div class="question hidden" id="question22">
+                <h2>22. What substance is measured in a cholesterol test?</h2>
+                <input type="text" id="answer22">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 23 -->
+            <div class="question hidden" id="question23">
+                <h2>23. What is the primary use of a microscope in a lab?</h2>
+                <input type="text" id="answer23">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 24 -->
+            <div class="question hidden" id="question24">
+                <h2>24. Which organ is primarily tested for liver function?</h2>
+                <input type="text" id="answer24">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 25 -->
+            <div class="question hidden" id="question25">
+                <h2>25. What is the term for a high white blood cell count?</h2>
+                <input type="text" id="answer25">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 26 -->
+            <div class="question hidden" id="question26">
+                <h2>26. What type of sample is used to prepare a blood smear?</h2>
+                <input type="text" id="answer26">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 27 -->
+            <div class="question hidden" id="question27">
+                <h2>27. What is the purpose of preparing a blood smear?</h2>
+                <input type="text" id="answer27">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 28 -->
+            <div class="question hidden" id="question28">
+                <h2>28. What is the primary function of a blood smear?</h2>
+                <input type="text" id="answer28">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 29 -->
+            <div class="question hidden" id="question29">
+                <h2>29. Which blood cell abnormality might be observed in a blood smear for diagnosing anemia?</h2>
+                <input type="text" id="answer29">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <!-- Question 30 -->
+            <div class="question hidden" id="question30">
+                <h2>30. What test is commonly used to assess red blood cell morphology?</h2>
+                <input type="text" id="answer30">
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+            <!-- Question 31 -->
+            <div class="question hidden" id="question31">
+                <h2>31. Which component of blood is crucial for clotting?</h2>
+                <input type="text" id="answer31">
+                <button onclick="finishQuiz()">Finish</button>
+            </div>
+            
+        </div>
+
+        <!-- Result Section -->
+        <div id="result" class="hidden">
+            <h2>Quiz Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Correct Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
